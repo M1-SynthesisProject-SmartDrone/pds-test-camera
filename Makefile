@@ -28,5 +28,8 @@ CFLAGS = $(COMPILERFLAGS)
 main : main.cpp
 	g++ -o bin/main main.cpp `pkg-config --cflags --libs opencv` -g -Wall
 
+test_img_sizes : test_img_sizes.cpp
+	g++ -o bin/test_img_sizes test_img_sizes.cpp `pkg-config --cflags --libs opencv` -g -Wall
+
 clean :
 	rm  $(DIR_OBJ)/*.o ; rm main ;
